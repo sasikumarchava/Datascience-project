@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideIn {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white mx-5">
+  <header class="bg-red-700 py-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-5xl font-bold mb-4 ml-16 animate-slideIn">UniDestiny</h1>
+        <!-- <img src="C:\Users\nagap\Downloads\University Admission Eligibility Predictor\University Admission Eligibility Predictor\templates\university_entrance.png" width="80" height="80" class = "mr-96 animate-slideIn rounded-lg" alt=""> -->
+        <img src="{{url_for('static', filename='university_entrance.png')}}"  width="80" height="80" class = "mr-96 animate-slideIn rounded-lg" />
+      <nav class = "mr-4">
+        <a href="#about_us" class="text-white hover:underline ml-4">About us</a>
+        <a href="#features" class="text-white hover:underline ml-4">Features</a>
+        <a href="#pricing" class="text-white hover:underline ml-4">Pricing</a>
+        <a href="#testimonials" class="text-white hover:underline ml-4">Testimonials</a>
+        <a href="#contact" class="text-white hover:underline ml-4">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-red-700 py-16">
+    <div class = "flex flox-row">
+      <div class="container mx-auto ml-4 mt-4">
+        <h1 class="text-4xl font-bold mb-4 animate-slideIn">Welcome to the University Prediction App</h1>
+        <p class="text-gray-300 text-lg animate-slideIn">Get accurate predictions for your future destination university.</p>
+        <p class="text-gray-300 text-lg animate-slideIn">your one stop for all your estimations.</p>
+        <div class="mt-8 animate-slideIn">
+          <a href="prediction" class="bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Predict now</a>
+
+        </div>
+      </div>
+      <div class="mr-8 rounded-lg">
+        <!-- <img src="C:\Users\nagap\Downloads\University Admission Eligibility Predictor\University Admission Eligibility Predictor\templates\student.jpg" width="700" height="350" class="mr-12 rounded-lg" alt=""> -->
+        <img src="{{url_for('static', filename='student.jpg')}}" width="700" height="350" class = "mr-12 rounded-lg" />
+    </div>
+    </div>
+    </section>
+
+    <section id="about_us" class="py-16">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-8 animate-slideIn">About us</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+            <div class="bg-red-800 p-8 rounded animate-slideIn">
+              <p class="text-gray-300">Welcome to the University Prediction App, your ultimate companion in navigating the complexities of higher education. We understand that choosing the right university and academic path can be a daunting task, filled with uncertainties and questions about the future. That's why we're here to provide you with accurate and personalized predictions to help you make informed decisions and set yourself up for success.Our innovative University Prediction App leverages advanced algorithms and data analysis techniques to offer you valuable insights into various aspects of your academic journey. Whether you're a prospective student exploring different universities, a current student planning your course selection, or a career-driven individual considering further education, our app is designed to assist you every step of the way.</p>
+              <p class="text-gray-300">With our app, you can benefit from a range of features tailored to your specific needs. Get personalized course recommendations that align with your interests and career aspirations, allowing you to make well-informed decisions about your academic path. Our predictive analytics capabilities leverage historical data and performance patterns to provide accurate predictions about your likelihood of success in specific courses or programs.Beyond academic guidance, our app also offers career path guidance, helping you align your educational choices with your long-term career goals. Discover the most promising career opportunities in your field of interest and make informed decisions about your educational and professional future.</p>
+              <p class="text-gray-300">We are committed to empowering you with the knowledge and tools necessary to make confident choices about your education. Our goal is to simplify the decision-making process, reduce uncertainty, and optimize your chances of achieving academic and career success.Join us on this exciting journey of exploration, prediction, and personal growth. Download the University Prediction App today and unlock a world of possibilities for your educational future. Let us be your trusted companion in shaping your path towards a fulfilling and successful university experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="features" class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 animate-slideIn">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Admission Chances Evaluation</h3>
+            <p class="text-gray-300">The system can assess and predict a student's chances of getting admitted to specific universities or programs based on their academic achievements, test scores, and other relevant factors.With our app, you can benefit from a range of features tailored to your specific needs. Get personalized course recommendations that align with your interests and career aspirations.</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Career Path Guidance</h3>
+            <p class="text-gray-300">The system can offer guidance and insights into potential career paths associated with different university programs, helping students make informed decisions about their academic and professional futures.Beyond academic guidance, our app also offers career path guidance, helping you align your educational choices with your long-term career goals. </p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Student Success Predictions</h3>
+            <p class="text-gray-300">The system can analyze historical data and student performance metrics to predict the likelihood of success and academic performance,ensuring that students stay on track throughout the application process.We are committed to empowering you with the knowledge and tools necessary to make confident choices about education. Our goal is to simplify the decision-making process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pricing" class="bg-red-900 py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 mt-2 ml-4 animate-slideIn">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4 gap-8">
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Basic</h3>
+            <p class="text-white-300">
+                <ul class="text-white-600">
+                    <li>&#x2022; Personalized course recommendations</li>
+                    <li>&#x2022; Limited access to predictive analytics</li>
+                    <li>&#x2022; Career path guidance</li>
+                    <li>&#x2022; Email support</li>
+                  </ul>
+                  <p class="mt-4 mb-4 text-2xl font-bold">$9.99/month</p>
+                  <a href="#" class="mt-4 bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Get Started</a>
+                
+            </p>
+
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Pro</h3>
+            <ul class="text-white-600">
+                <li>&#x2022; Enhanced personalized course recommendations</li>
+                <li>&#x2022; Expanded access to predictive analytics</li>
+                <li>&#x2022; Detailed performance analysis and insights</li>
+                <li>&#x2022; Priority email support</li>
+            </ul>
+            <p class="mt-4 mb-4 text-2xl font-bold">$19.99/month</p>
+            <a href="#" class="mt-4 bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Get Started</a>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Premium</h3>
+            <ul class="text-gray-200">
+                <li>&#x2022; Comprehensive personalized course recommendations</li>
+                <li>&#x2022; Full access to predictive analytics</li>
+                <li>&#x2022; Advanced performance tracking and recommendations</li>
+                <li>&#x2022; Priority email and chat support</li>
+                <li>&#x2022; Exclusive access to premium career resources and networking opportunities</li>
+            </ul>
+            <p class="mt-4 mb-4 text-2xl font-bold">$29.99/month</p>
+            <a href="#" class="mt-4 bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 animate-slideIn">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <p class="text-gray-300 italic">"As a high school student uncertain about which university to choose, the university prediction system provided me with valuable guidance. Its plain language system made it incredibly easy to understand and navigate. The predictions were accurate and personalized, taking into account my interests, academic achievements, and desired location. Thanks to this system, I found the perfect university that matched my needs and aspirations. "</p>
+            <p class="mt-4 font-bold">- John Doe</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <p class="text-gray-300 italic">"I was overwhelmed by the countless options when it came to choosing a university. Thankfully, I discovered the university prediction system, and it was a game-changer. The system's plain language interface made it accessible to students like me who aren't tech-savvy. It assessed my preferences, academic strengths, and career goals to generate tailored predictions. I was amazed at how accurate the recommendations were, and it saved me a lot of time and stress."</p>
+            <p class="mt-4 font-bold">- Jane Smith</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <p class="text-gray-300 italic">"The university prediction system was an invaluable resource during my college search. Its plain language approach made it easy for me to understand the predictions and criteria used in the selection process. The system took into account my academic performance, extracurricular activities, and desired field of study. It provided me with a list of universities that suited my interests and also highlighted additional information, such as scholarships and campus resources."</p>
+            <p class="mt-4 font-bold">- Michael Johnson</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-red-700 py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 animate-slideIn ml-4 flex justify-center">Contact Us</h2>
+        <p class="text-gray-300 mb-4 animate-slideIn ml-4 flex justify-center">Have a question or need support? Reach out to us!</p>
+        <form class="animate-slideIn align-items-center">
+            <div class = "flex flex-col ">
+          <div class="flex flex-col md:flex-row ml-4 justify-center">
+            <input type="text" placeholder="Your Name" class="bg-red-800 rounded py-2 px-4 mb-4 md:mr-4">
+            <input type="email" placeholder="Your Email" class="bg-red-800 rounded py-2 px-4 mb-4 md:mr-4">
+          </div>
+          <div class = "flex justify-center"><textarea placeholder="Your Message" rows="10" cols="55" class="bg-red-800 rounded py-2 px-4 ml-4 mb-4"></textarea></div>
+          
+          <div class="flex justify-center"><button type="submit" class="bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded ml-100">Submit</button></div></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-red-900 py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-300 animate-slideIn">© 2023 Prediction App. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".animate-slideIn");
+      elements.forEach(function (element) {
+        element.style.animation = "slideIn 0.5s ease-in-out";
+      });
+    });
+  </script>
+</body>
+
+</html>
